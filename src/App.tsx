@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Container, Content, Header } from "./App.styles";
 import TodoAdd from "./components/TodoAdd";
+import TodoList from "./components/TodoList";
 import { Todo } from "./types";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <Content>
         <Header>Todo App With Typescript</Header>
         <TodoAdd setTodos={setTodos} />
+        <TodoList todos={todos} />
       </Content>
     </Container>
   );
