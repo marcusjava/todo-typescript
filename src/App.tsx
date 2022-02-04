@@ -1,25 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { Container, Content, Header } from "./App.styles";
+import TodoAdd from "./components/TodoAdd";
+import { Todo } from "./types";
 
 function App() {
+  const [todos, setTodos] = useState<Todo[]>([]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Content>
+        <Header>Todo App With Typescript</Header>
+        <TodoAdd setTodos={setTodos} />
+      </Content>
+    </Container>
   );
 }
 

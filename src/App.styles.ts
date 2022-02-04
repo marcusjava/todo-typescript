@@ -1,0 +1,24 @@
+import styled from "styled-components/macro";
+
+export const Container = styled.div`
+  background-color: #17181f;
+  color: #797a81;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+`;
+
+export const Content = styled.div`
+  width: 80%;
+  height: 60%;
+  padding: 15px;
+`;
+
+export const Header = styled.h1`
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  border-bottom: 1px solid #444;
+  padding-bottom: 15px;
+`;
