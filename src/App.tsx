@@ -11,7 +11,7 @@ function App() {
       <Content>
         <Header>Todo App With Typescript</Header>
         <TodoAdd setTodos={setTodos} />
-        <TodoList todos={todos} />
+        <TodoList todos={todos} setTodos={setTodos} />
       </Content>
     </Container>
   );
