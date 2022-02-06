@@ -24,13 +24,17 @@ export const CheckBoxContainer = styled.div`
   gap: 10px;
 `;
 
-export const TrashIcon = styled.button`
+export const TrashIcon = styled.button<Props>`
   border: 0;
   outline: none;
   padding: 15px;
   cursor: pointer;
   font-size: 30px;
   border-radius: 50%;
+  background-color: transparent;
+  &:hover {
+    background-color: ${(props) => (props.checked ? "#E5E5E5" : "#97C160")};
+  }
 `;
 
 export const HiddenCheckbox = styled.input.attrs({ type: "checkbox" })`

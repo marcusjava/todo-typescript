@@ -38,7 +38,7 @@ const CheckBox = ({ todo }: Props) => {
         </StyledCheckbox>
         <Text checked={checked}>{todo.description}</Text>
       </CheckBoxContainer>
-      <TrashIcon onClick={() => deleteTodo(todo)}>
+      <TrashIcon onClick={() => deleteTodo(todo)} checked={checked}>
         <BsFillTrashFill />
       </TrashIcon>
     </Container>
