@@ -5,11 +5,10 @@ import CheckBox from "../CheckBox";
 
 interface Props {
   todo: Todo;
-  setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
 }
 
-const TodoItem = ({ todo, setTodos }: Props) => {
-  return <CheckBox setTodos={setTodos}>{todo.description}</CheckBox>;
+const TodoItem = ({ todo }: Props) => {
+  return <CheckBox todo={todo} />;
 };
 
 export default TodoItem;

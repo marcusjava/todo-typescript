@@ -10,8 +10,8 @@ function App() {
     <Container>
       <Content>
         <Header>Todo App With Typescript</Header>
-        <TodoAdd setTodos={setTodos} />
-        <TodoList todos={todos} setTodos={setTodos} />
+        <TodoAdd />
+        <TodoList />
       </Content>
     </Container>
   );

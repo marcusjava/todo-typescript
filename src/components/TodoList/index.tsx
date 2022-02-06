@@ -1,20 +1,17 @@
 import React from "react";
+import { useTodo } from "../../context/todo";
 import { Todo } from "../../types";
 import TodoItem from "../Todo";
 
 import { Container } from "./styles";
 
-interface Props {
-  todos: Todo[];
-  setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
-}
-
-const TodoList = ({ todos, setTodos }: Props) => {
+const TodoList = () => {
+  const { todos } = useTodo();
   return (
     <Container>
       <ul>
         {todos?.map((todo, key) => (
-          <TodoItem todo={todo} key={key} setTodos={setTodos} />
+          <TodoItem todo={todo} key={key} />
         ))}
       </ul>
     </Container>

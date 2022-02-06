@@ -1,14 +1,12 @@
 import React, { useState } from "react";
+import { useTodo } from "../../context/todo";
 import { Todo } from "../../types";
 
 import { Input } from "./styles";
 
-interface Props {
-  setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
-}
-
-const TodoAdd = ({ setTodos }: Props) => {
+const TodoAdd = () => {
   const [todo, setTodo] = useState<Todo>({ description: "", completed: false });
+  const { addTodo } = useTodo();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -16,7 +14,7 @@ const TodoAdd = ({ setTodos }: Props) => {
       alert("Preencha a descrição da tarefa");
       return;
     }
-    setTodos((todos) => [...todos, todo]);
+    addTodo(todo);
     setTodo({ description: "", completed: false });
   };
   return (

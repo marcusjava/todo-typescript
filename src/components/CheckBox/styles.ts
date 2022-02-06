@@ -14,7 +14,23 @@ export const Container = styled.div<Props>`
   margin: 15px 0;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 10px;
+`;
+
+export const CheckBoxContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+`;
+
+export const TrashIcon = styled.button`
+  border: 0;
+  outline: none;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 30px;
+  border-radius: 50%;
 `;
 
 export const HiddenCheckbox = styled.input.attrs({ type: "checkbox" })`
