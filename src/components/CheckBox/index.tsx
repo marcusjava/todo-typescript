@@ -9,7 +9,7 @@ import {
   StyledCheckbox,
   CheckBoxContainer,
   TrashIcon,
-} from "./styles";
+} from "./checkbox/styles";
 import { BsFillTrashFill } from "react-icons/bs";
 
 interface Props {
@@ -30,15 +30,23 @@ const CheckBox = ({ todo }: Props) => {
     }
   };
   return (
-    <Container checked={checked}>
+    <Container checked={checked} data-testid="todo-item">
       <CheckBoxContainer>
         <HiddenCheckbox checked={checked} readOnly />
-        <StyledCheckbox checked={checked} onClick={handleCheckoxChange}>
+        <StyledCheckbox
+          checked={checked}
+          onClick={handleCheckoxChange}
+          data-testid="checkbox"
+        >
           <img alt="tick icon" style={{ width: "15px" }} src={Icon} />
         </StyledCheckbox>
         <Text checked={checked}>{todo.description}</Text>
       </CheckBoxContainer>
-      <TrashIcon onClick={() => deleteTodo(todo)} checked={checked}>
+      <TrashIcon
+        onClick={() => deleteTodo(todo)}
+        checked={checked}
+        data-testid="delete"
+      >
         <BsFillTrashFill />
       </TrashIcon>
     </Container>

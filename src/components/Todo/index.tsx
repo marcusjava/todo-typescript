@@ -8,7 +8,11 @@ interface Props {
 }
 
 const TodoItem = ({ todo }: Props) => {
-  return <CheckBox todo={todo} />;
+  return (
+    <Container>
+      <CheckBox todo={todo} />
+    </Container>
+  );
 };
 
 export default TodoItem;

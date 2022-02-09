@@ -1,13 +1,7 @@
 import styled from "styled-components/macro";
 
 export const Container = styled.div`
-  display: flex;
-  flex-direction: row;
-  color: #fff;
-  background-color: #797a81;
-  border-radius: 15px;
-  padding: 0 20px;
-  gap: 25px;
+  width: 100%;
 `;
 
 export const Description = styled.h1`
